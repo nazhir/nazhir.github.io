@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Lokasi Banjir di Jakarta</name>
+  <description><![CDATA[Ini adalah peta lokasi banjir di Jakarta, Januari 2013.]]></description>
+  <NetworkLink>
+    <name>Lokasi_Banjir_di_Jakarta</name>
+    <Link>
+      <href>http://maps.google.com/maps/ms?t=m&amp;ie=UTF8&amp;source=embed&amp;authuser=0&amp;hl=en&amp;oe=UTF8&amp;msa=0&amp;msid=210646426167132067981.0004d362a5c9e6ca592eb&amp;output=kml</href>
+    </Link>
+  </NetworkLink>
+</Document>
+</kml>
