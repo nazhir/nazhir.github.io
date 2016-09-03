@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Forms</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <!-- Create a basic form. -->
+	<form name="userInfoForm" action="#" method="post">
+	  <fieldset>
+	    <legend>
+	      User Information
+	    </legend>
+	    <div>
+		    <!-- Here is a simple text input element. It makes use of the required attribute to enforce 
+		      that a value entered when submitting the form. The label element is also demonstrated. 
+		      The &nbsp; is a named character reference for a whitespace. This element will receive the focus on page load.
+		    -->
+		    <label>Name*:&nbsp;
+		      <input type="text" id="inputUserName" name="username" required="required" autofocus="autofocus">
+		    </label>
+		</div>
+	    <div>
+		    <!-- Here is a date input. This is not well supported but works in Chrome. Notice what happens in other browsers. -->
+		    <label>Date of Birth:&nbsp;
+		      <input type="date" id="inputBirthDate" name="birthdate" >
+		    </label>
+		</div>
+	    <div>
+		    <!--  Here is an email input. The label element using the for attribute is also demonstrated.  -->	    
+		    <label for="inputEmail">Email Address:&nbsp;</label>
+		    <input style="display: inline;" type="email" id="inputEmail" name="email" placeholder="wiw@gmail.com">
+	    </div>
+	    <div>
+			<!--  Here is a url input. It uses the placeholder attribute to give an input hint. -->	   
+			<label>Personal Website Address:&nbsp; 
+	    	  <input type="url" id="inputWebAddress" name="webaddress" placeholder="http://www.example.com">  
+	    	</label>
+	    </div>
+	    <div>
+			<!--  Here is a telephone input. Note that tel type does not enforce any syntax. You could add 
+			  your own validation using the pattern attribute as shown in the next example. 
+			-->	    
+			<label>Telephone Number*:&nbsp;
+		    	<input type="tel" id="inputTel" name="telnumber" required="required">  	
+		    </label>      
+	    </div>
+	   	<div>
+	      <!-- This is an example of a select element. -->
+	      <label>Telephone Number Type:&nbsp; 
+	      <select name="teltype">
+	        <option value="1">Home</option>
+	        <option value="2">Office</option>
+	        <option value="3">Cell</option>
+	      </select>
+	      </label>
+	    </div>
+	    <div>
+	    	<!--  Here is a text input that makes use of a datalist element. -->
+		    <label>School*:&nbsp; 
+		      <input type="text" id="inputSchool" 
+		        name="school"  list="schoolDataList" required="required"
+		      >
+		    </label>
+		    <datalist id="schoolDataList">
+		      <option value="Business"></option>
+		      <option value="Computer Science"></option>
+		      <option value="Engineering"></option>
+		      <option value="Fine Arts"></option>
+		      <option value="Humanities and Social Science"></option>
+		      <option value="Natural and Physical Science"></option>
+		    </datalist>	    
+	    </div>
+	    <div>
+	    <!-- This is an example of using the pattern attribute to enforce a text value using regular expressions. 
+	      It does not ensure that the input is given a value. To do that, we also would need to add the required attribute in addition
+	      to the patter attribute. 
+	    -->
+	    <label for="inputCourse">Favorite Course #:&nbsp;</label>
+	    <input type="text" id="inputCourse" 
+	      name="favoritecourse" pattern="[0-9]{5}"
+	      title="A valid course number is exaclty 5 digits long."
+	      placeholder="12345"
+	    >
+	    </div>
+	    <div>
+	    <!-- This is an example of the number input type and its min and max attributes.-->
+	    <label for="inputSectionNumber">Section #:&nbsp;</label>
+	    <input type="number" id="inputSectionNumber" 
+	      name="sectionnumber"
+	      min="1"
+	      max="5"
+	    >
+	    </div>
+	    <div>Gender:</div>
+	    <!-- This is an example of radio button inputs. -->
+	    <div>
+	      <input type="radio" id="inputMale" name="gender" value="1" checked="checked">
+	      <label for="inputMale">Male</label>
+	    </div>
+	   	<div>
+	      <input type="radio" id="inputFemale" name="gender" value="2">
+	      <label for="inputFemale">Female</label>
+		</div>    
+	    	    
+	    
+	    <input type="submit" value="Submit Form">
+	    <input type="reset" value="Bersihkan Form">
+	  </fieldset>
+	
+	</form>
+
+  </body>
+</html>
